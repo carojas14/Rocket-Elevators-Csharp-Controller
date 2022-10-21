@@ -15,11 +15,11 @@ In the scenarios provided, we use a building of 66 floors including 6 basements 
 ### Example of scenario
 
 Scenario 1:
-Elevator B1 at 20th floor going to the 5th floor
-Elevator B2 at 3rd floor going to the 15th floor
-Elevator B3 at 13th floor going to Lobby
-Elevator B4 at 15th floor going to the 2nd floor
-Elevator B5 at 6th floor going to Lobby
+- Elevator B1 at 20th floor going to the 5th floor
+- Elevator B2 at 3rd floor going to the 15th floor
+- Elevator B3 at 13th floor going to Lobby
+- Elevator B4 at 15th floor going to the 2nd floor
+- Elevator B5 at 6th floor going to Lobby
 
 Someone at Lobby wants to go to the 20th floor.
 Elevator B5 is expected to be sent.
