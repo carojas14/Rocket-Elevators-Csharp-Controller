@@ -43,7 +43,9 @@ namespace Commercial_Controller
 
         }
 
-
+        /**
+        * Create columns for basement floors used Column class
+        **/
         public void createBasementColumn(int _amountOfBasements, int _amountOfElevatorPerColumn)
         {
             List<int> servedFloors = new List<int>();
@@ -59,6 +61,9 @@ namespace Commercial_Controller
             this.columnID++;
         }
 
+        /**
+        * Create columns used Column class
+        **/
         public void createColumns(int amountOfColumns, int amountOfFloors, int amountOfBasements, int amountOfElevatorPerColumn)
         {
             int amountOfFloorsPerColumn = (int)Math.Ceiling((double)amountOfFloors / amountOfColumns);
@@ -81,6 +86,9 @@ namespace Commercial_Controller
             }
         }
 
+        /**
+        * Create buttons requests used FloorRequestButton class
+        **/
         public void createFloorRequestButtons(int _amountOfFloors)
         {
             int buttonFloor = 1;
@@ -93,6 +101,10 @@ namespace Commercial_Controller
             }
         }
 
+
+        /**
+        * Create buttons requests for the basement floors used FloorRequestButton class
+        **/
         public void createBasementFloorRequestButtons(int _amountOfBasements)
         {
             int buttonFloor = -1;
@@ -105,6 +117,10 @@ namespace Commercial_Controller
             }
         }
 
+
+        /**
+        * Find the best column to requested floor
+        **/
         public Column findBestColumn(int requestedFloor)
         {
             Column bestColumn = null;
