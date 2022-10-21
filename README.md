@@ -1,13 +1,29 @@
 # Rocket-Elevators-Csharp-Controller
-This is the template to use for the C# commercial controller. In the Commercial_Controller folder, you will find the classes that should be used along with some methods described in the requirements. The necessary files to run some tests are also included, in the Commercial_Controller.Tests folder.
+This is the C# commercial controller program.
 
-### Installation
+### This controller is capable of supporting two main events:
 
-As long as you have **.NET 6.0** installed on your computer, nothing more needs to be installed:
+1. A person presses a call button on a floor to request an elevator. The controller selects an available cage and it is routed to that person based on two parameters provided by pressing the button:
+- The floor where the person is
+- The direction in which he will go (up or down)
+2. A person at the Lobby requests a floor and is sent to the correct column. The parameters provided are :
+- The floor where the user want to go
+- The direction in which he will go (up or down)
 
-The code to run the scenarios is included in the Commercial_Controller folder, and can be executed there with:
+In the scenarios provided, we use a building of 66 floors including 6 basements served by 4 columns of 5 cages each. The floors are separated amongst the columns in the following way: B6 to B1, 2 to 20, 21 to 40, 41 to 60. All the columns serve the 1st floor (Lobby). There are no floor buttons inside the elevators. Instead, there is a panel at the Lobby with which the users select where they want to go.
 
-`dotnet run <SCENARIO-NUMBER>`
+### Example of scenario
+
+Scenario 1:
+Elevator B1 at 20th floor going to the 5th floor
+Elevator B2 at 3rd floor going to the 15th floor
+Elevator B3 at 13th floor going to Lobby
+Elevator B4 at 15th floor going to the 2nd floor
+Elevator B5 at 6th floor going to Lobby
+
+Someone at Lobby wants to go to the 20th floor.
+Elevator B5 is expected to be sent.
+
 
 ### Running the tests
 
@@ -15,18 +31,3 @@ To launch the tests, make sure to be at the root of the repository and run:
 
 `dotnet test`
 
-With a fully completed project, you should get an output like:
-
-![Screenshot from 2021-06-15 17-31-02](https://user-images.githubusercontent.com/28630658/122128889-3edfa500-ce03-11eb-97d0-df0cc6a79fed.png)
-
-You can also get more details about each test by adding the `-v n` flag: 
-
-`dotnet test -v n` 
-
-which should give something like: 
-
-![Screenshot from 2021-06-15 18-00-52](https://user-images.githubusercontent.com/28630658/122129140-a8f84a00-ce03-11eb-8807-33d7eab8c387.png)
-
-Make sure to only edit files in the Commercial_Controller folder. The test and scenarios files can be left in your final project. The grader will run tests similar to the ones provided.
-
-Of course, make sure to edit this Readme file to describe your own project!
